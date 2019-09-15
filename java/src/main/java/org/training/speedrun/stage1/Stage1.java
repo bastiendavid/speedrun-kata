@@ -1,7 +1,7 @@
 package org.training.speedrun.stage1;
 
 /**
- * Objective of this stage: refactor until nothing left is hardcoded, and the tests pass.
+ * Refactor until nothing left is hardcoded, and the tests pass.
  */
 public class Stage1 {
 
