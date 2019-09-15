@@ -40,3 +40,4 @@ As a navigator:
 - Switch roles between stages.
 - Do not try to compare your times with others, since your code will end-up in a different state.
 - Maybe have a look at some IDE cheat sheets. Here is [IntelliJ IDEA default keymap](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)
+- Yes, copy/paste from a previous run is considered as cheating.
