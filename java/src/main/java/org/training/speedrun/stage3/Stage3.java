@@ -7,10 +7,6 @@ import java.util.Arrays;
  */
 public class Stage3 {
 
-    public int computePrice(Items[] cart) {
-        return Arrays.stream(cart).map(item -> item.price).reduce(0, Integer::sum);
-    }
-
     enum Items {
         POTATO(1),
         TOMATO(2),
