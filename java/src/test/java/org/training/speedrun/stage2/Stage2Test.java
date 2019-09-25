@@ -23,6 +23,7 @@ class Stage2Test {
         assertThat(stage2.computeScore(1, 1, 3)).isEqualTo(10);
         assertThat(stage2.computeScore(4, 3, 3)).isEqualTo(20);
         assertThat(stage2.computeScore(2, 5, 5)).isEqualTo(24);
+        assertThat(stage2.computeScore(1, 4, 1)).isEqualTo(12);
     }
 
     @Test
