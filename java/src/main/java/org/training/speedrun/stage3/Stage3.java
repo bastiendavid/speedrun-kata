@@ -15,10 +15,14 @@ public class Stage3 {
         BANANA(3),
         PEER(2);
 
-        final int price;
+        private final int price;
 
         Items(int price) {
             this.price = price;
+        }
+
+        public int getPrice() {
+            return price;
         }
     }
 }
