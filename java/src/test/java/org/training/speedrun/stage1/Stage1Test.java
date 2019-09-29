@@ -12,9 +12,9 @@ class Stage1Test {
 
 //    @ParameterizedTest
 //    @MethodSource("provideCarts")
-//    void compute_price(Stage3.Items[] cart, int expectedPrice) {
+//    void compute_price(Stage1.Items[] cart, int expectedPrice) {
 //        // When
-//        int price = stage3.computePrice(cart);
+//        int price = stage1.computePrice(cart);
 //        // Then
 //        assertThat(price).isEqualTo(expectedPrice);
 //    }
