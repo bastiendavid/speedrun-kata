@@ -1,28 +1,37 @@
 package org.training.speedrun.stage4;
 
-import org.junit.jupiter.api.Test;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import java.util.stream.Stream;
 
 class Stage4Test {
 
-    @ParameterizedTest
-    @CsvSource({
-            "aeiou,short_odd_aeiou",
-            "AEIOUY,short_even_aeiouy",
-            "ABCDEFGHIJKLMNOPQRSTUVWXYZ,long_even_aBCDeFGHiJKLMNoPQRSTuVWXyZ",
-            "kjqtrpmnz,short_odd_kjqtrpmnz",
-            "kjqtrpmnzr,long_even_kjqtrpmnzr",
-            "kjqtrApmnzsr,long_even_kjqtrapmnzsr"
-    })
-    void doTheThing_transforms_the_input_string(String input, String output) {
-        assertThat(new Stage4().doTheThing(input)).isEqualTo(output);
+    private final Stage4 stage4 = new Stage4();
+
+    private static Stream<Arguments> generateCart() {
+        return Stream.of(
+                Arguments.of(new double[]{}, false, false, 0),
+                Arguments.of(new double[]{2, 3}, false, false, 5),
+                Arguments.of(new double[]{10, 10}, true, true, 25),
+                Arguments.of(new double[]{10, 10}, true, false, 21),
+                Arguments.of(new double[]{10, 10}, false, true, 24),
+                Arguments.of(new double[]{1, 1, 1, 1, 1}, false, false, 5.2),
+                Arguments.of(new double[]{1, 1, 1, 1, 1}, true, false, 5.45),
+                Arguments.of(new double[]{1, 1, 1, 1, 1}, false, true, 6.2),
+                Arguments.of(new double[]{1, 1, 1, 1, 1}, true, true, 6.45),
+                Arguments.of(new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, false, false, 22),
+                Arguments.of(new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, true, false, 23),
+                Arguments.of(new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, false, true, 26),
+                Arguments.of(new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, true, true, 27)
+        );
     }
 
-    @Test
-    void doTheThing_transforms_an_empty_string() {
-        assertThat(new Stage4().doTheThing("")).isEqualTo("short_even_");
+    @ParameterizedTest
+    @MethodSource("generateCart")
+    void compute_cart_price(double[] c, boolean v, boolean b, double expectedPrice) {
+        Assertions.assertThat(stage4.compute(c, v, b)).isEqualTo(expectedPrice);
     }
 }

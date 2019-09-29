@@ -1,32 +1,30 @@
 package org.training.speedrun.stage3;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
-
-import java.util.stream.Stream;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 class Stage3Test {
 
-    private Stage3 stage3 = new Stage3();
+    private final Stage3 stage3 = new Stage3();
 
-//    @ParameterizedTest
-//    @MethodSource("provideCarts")
-//    void compute_price(Stage3.Items[] cart, int expectedPrice) {
-//        // When
-//        int price = stage3.computePrice(cart);
-//        // Then
-//        assertThat(price).isEqualTo(expectedPrice);
-//    }
-
-    private static Stream<Arguments> provideCarts() {
-        return Stream.of(
-                Arguments.of(new Stage3.Items[]{Stage3.Items.APPLE, Stage3.Items.TOMATO, Stage3.Items.BANANA}, 6),
-                Arguments.of(new Stage3.Items[]{Stage3.Items.POTATO, Stage3.Items.POTATO}, 2),
-                Arguments.of(new Stage3.Items[]{Stage3.Items.LETTUCE, Stage3.Items.TOMATO, Stage3.Items.POTATO}, 5),
-                Arguments.of(new Stage3.Items[]{Stage3.Items.APPLE, Stage3.Items.PEER, Stage3.Items.BANANA, Stage3.Items.PEER}, 8));
+    @ParameterizedTest
+    @CsvSource({
+            "aeiou,short_odd_aeiou",
+            "AEIOUY,short_even_aeiouy",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ,long_even_aBCDeFGHiJKLMNoPQRSTuVWXyZ",
+            "kjqtrpmnz,short_odd_kjqtrpmnz",
+            "kjqtrpmnzr,long_even_kjqtrpmnzr",
+            "kjqtrApmnzsr,long_even_kjqtrapmnzsr"
+    })
+    void doTheThing_transforms_the_input_string(String input, String output) {
+        assertThat(stage3.doTheThing(input)).isEqualTo(output);
     }
 
+    @Test
+    void doTheThing_transforms_an_empty_string() {
+        assertThat(stage3.doTheThing("")).isEqualTo("short_even_");
+    }
 }

@@ -1,44 +1,36 @@
 package org.training.speedrun.stage4;
 
 /**
- * Remove all the code duplications.
+ * Make this code clean.
  */
 public class Stage4 {
 
-    public String doTheThing(String input) {
-
-        String result;
-        if (input.length() % 2 == 0) {
-            result = input.replace('A', 'a');
-            result = result.replace('E', 'e');
-            String prefix = "even";
-            result = result.replace('I', 'i');
-            result = result.replace('O', 'o');
-            result = result.replace('U', 'u');
-            result = result.replace('Y', 'y');
-            if (result.length() < 10) {
-                result = prefix + "_" + result;
-                result = "short" + "_" + result;
-            } else {
-                result = prefix + "_" + result;
-                result = "long" + "_" + result;
-            }
-        } else {
-            result = input.replace('A', 'a');
-            String prefix = "odd";
-            result = result.replace('E', 'e');
-            result = result.replace('I', 'i');
-            result = result.replace('O', 'o');
-            result = result.replace('U', 'u');
-            result = result.replace('Y', 'y');
-            if (result.length() < 10) {
-                result = prefix + "_" + result;
-                result = "short_" + result;
-            } else {
-                result = prefix + "_" + result;
-                result = "long_" + result;
-            }
+    double compute(double[] c, boolean v, boolean b) {
+        double t = 0;
+        for (int i = 0; i < c.length; ++i) {
+            t += c[i];
         }
-        return result;
+        int d = compute(c.length, b, v);
+        double d2 = d * t / 100;
+        return t + d2;
+    }
+
+    int compute(int n, boolean b1, boolean b2) {
+        int p = 0;
+        if (n >= 5 && n < 10) {
+            p += 4;
+        } else if (n >= 10) {
+            p += 10;
+        }
+        if (b1) {
+            // black friday discount
+            p += 20;
+        }
+
+        if (b2) {
+            // vip client
+            p += 5;
+        }
+        return p;
     }
 }

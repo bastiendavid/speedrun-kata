@@ -1,36 +1,38 @@
 package org.training.speedrun.stage5;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
- * Make this code clean.
+ * Refactor this code until all methods body is <= 5 lines, and you find the code clean.
  */
 public class Stage5 {
 
-    double compute(double[] c, boolean v, boolean b) {
-        double t = 0;
-        for (int i = 0; i < c.length; ++i) {
-            t += c[i];
+    boolean isEligible(String word) {
+        if (word.length() >= 10) {
+            List<Character> vowels = Arrays.asList('a', 'e', 'i', 'o', 'u', 'y');
+            long nbVowels = word.chars().mapToObj(c -> (char) c).filter(vowels::contains).count();
+            if (nbVowels >= 4) {
+                return true;
+            } else {
+                List<Character> specialLetters = Arrays.asList('p', 'm');
+                long nbSpecialLetters = word.chars().mapToObj(c -> (char) c).filter(specialLetters::contains).count();
+                if (nbSpecialLetters >= 3) {
+                    return true;
+                }
+            }
+        } else {
+            long nbLettersInUpperCase = word.chars().filter(c -> c >= 'A' && c <= 'Z').count();
+            if (nbLettersInUpperCase >= 5) {
+                return true;
+            } else {
+                List<Character> vowels = Arrays.asList('a', 'e', 'i', 'o', 'u', 'y');
+                long nbVowels = word.chars().mapToObj(c -> (char) c).filter(vowels::contains).count();
+                if (nbVowels >= 3) {
+                    return true;
+                }
+            }
         }
-        int d = compute(c.length, b, v);
-        double d2 = d * t / 100;
-        return t + d2;
-    }
-
-    int compute(int n, boolean b1, boolean b2) {
-        int p = 0;
-        if (n >= 5 && n < 10) {
-            p += 4;
-        } else if (n >= 10) {
-            p += 10;
-        }
-        if (b1) {
-            // black friday discount
-            p += 20;
-        }
-
-        if (b2) {
-            // vip client
-            p += 5;
-        }
-        return p;
+        return false;
     }
 }
