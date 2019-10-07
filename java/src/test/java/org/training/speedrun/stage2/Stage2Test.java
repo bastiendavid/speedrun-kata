@@ -19,7 +19,7 @@ class Stage2Test {
     }
 
     @Test
-    void score_is_the_sum_of_dice_multiplied_by_3_if_2_dices_have_the_same_value() {
+    void score_is_the_sum_of_dice_multiplied_by_2_if_2_dices_have_the_same_value() {
         assertThat(stage2.computeScore(1, 1, 3)).isEqualTo(10);
         assertThat(stage2.computeScore(4, 3, 3)).isEqualTo(20);
         assertThat(stage2.computeScore(2, 5, 5)).isEqualTo(24);
