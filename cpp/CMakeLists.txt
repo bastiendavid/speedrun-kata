@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.14)
+project(speedrun-kata)
+
+set(CMAKE_CXX_STANDARD 17)
+include(GoogleTest)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic -Werror")
+add_executable(stage1Test test/stage1/Stage1Test.cpp test/stage1/Stage1Test.hpp main/stage1/Stage1.cpp main/stage1/Stage1.hpp)
+target_link_libraries( stage1Test  gtest)
+set(FooTestArgs --foo 1 --bar 2)
+gtest_add_tests(stage1Test "${FooTestArgs}" AUTO)
