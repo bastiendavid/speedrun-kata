@@ -4,7 +4,7 @@
 
 #ifndef CPP_STAGE1TEST_HPP
 #define CPP_STAGE1TEST_HPP
-#include "../../main/stage1/Stage1.hpp"
+#include "../main/stage1/Stage1.hpp"
 #include "gtest/gtest.h"
 
 
