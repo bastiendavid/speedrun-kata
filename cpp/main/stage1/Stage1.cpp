@@ -1,7 +1,3 @@
-//
-// Created by eaton on 08/10/2019.
-//
-
 #include "Stage1.hpp"
 
 const Stage1 Stage1::POTATO = Stage1(1);

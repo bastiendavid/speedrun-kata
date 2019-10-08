@@ -1,9 +1,5 @@
-//
-
 #ifndef CPP_STAGE1_HPP
 #define CPP_STAGE1_HPP
-
-
 #include <vector>
 
 class Stage1{
@@ -19,15 +15,6 @@ public:
       return price;
     }
 
-    static int computePrice(std::vector<Stage1> const & cart) {
-      int price = 0;
-      for (auto const & item : cart)
-      {
-        price += item.getPrice();
-      }
-      return price;
-    }
-    
 private:
     int price;
 
