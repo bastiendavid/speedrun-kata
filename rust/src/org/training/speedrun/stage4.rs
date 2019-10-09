@@ -31,6 +31,7 @@ fn compute_discount(n: usize, b1: bool, b2: bool) -> usize
     p += 20;
   }
   if b2 {
+    //vip client
     p += 5;
   }
   p

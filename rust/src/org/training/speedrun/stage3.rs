@@ -25,39 +25,23 @@ impl Replace for String
  */
 pub fn do_the_thing(input: &String) -> String
 {
-  let mut result: String;
-  if input.len() % 2 == 0 {
-    result = input.replace('A', 'a');
-    result = result.replace('E', 'e');
-    let prefix = String::from("even");
-    result = result.replace('I', 'i');
-    result = result.replace('O', 'o');
-    result = result.replace('U', 'u');
-    result = result.replace('Y', 'y');
-    if result.len() < 10 {
-      result = prefix + &String::from("_") + &result;
-      result = String::from("short") + &String::from("_") + &result;
-    } else {
-      result = prefix + &String::from("_") + &result;
-      result = String::from("long") + &String::from("_") + &result;
-    }
+  let shortness: String = if input.len() < 10 {
+    String::from("short")
   } else {
-    result = input.replace('A', 'a');
-    let prefix = String::from("odd");
-    result = result.replace('E', 'e');
-    result = result.replace('I', 'i');
-    result = result.replace('O', 'o');
-    result = result.replace('U', 'u');
-    result = result.replace('Y', 'y');
-    if result.len() < 10 {
-      result = prefix + &String::from("_") + &result;
-      result = String::from("short_") + &result;
-    } else {
-      result = prefix + &String::from("_") + &result;
-      result = String::from("long_") + &result;
-    }
-  }
-  result
+    String::from("long")
+  };
+  let oddness: String = if input.len() % 2 == 0 {
+    String::from("even")
+  } else {
+    String::from("odd")
+  };
+
+  shortness + &String::from("_") + &oddness + &String::from("_") + &input.replace('A', 'a')
+    .replace('E', 'e')
+    .replace('I', 'i')
+    .replace('O', 'o')
+    .replace('U', 'u')
+    .replace('Y', 'y')
 }
 
 macro_rules! do_the_thing_transforms_the_input_string
