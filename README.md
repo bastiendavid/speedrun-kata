@@ -42,9 +42,9 @@ As a navigator:
 - Maybe have a look at some IDE cheat sheets. Here is [IntelliJ IDEA default keymap](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)
 - Yes, copy/paste from a previous run is considered as cheating.
 
-## Instructions of the stages
+## Instructions for the stages
 
-Each instructions of the stages are in the source code. You can also find them here.
+For each stage, instructions can be found in the source code. You can also find them here.
 
 ### Stage 1
 
