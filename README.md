@@ -42,3 +42,27 @@ As a navigator:
 - Maybe have a look at some IDE cheat sheets. Here is [IntelliJ IDEA default keymap](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)
 - Yes, copy/paste from a previous run is considered as cheating.
 
+## Instructions of the stages
+
+Each instructions of the stages are in the source code. You can also find them here.
+
+### Stage 1
+
+Uncomment the tests, and make them pass.
+
+### Stage 2
+
+Refactor until there is only one level of indentation, you think the code is clean, and all the tests pass.
+
+### Stage 3
+
+Remove all the code duplications.
+
+### Stage 4
+
+Make this code clean.
+
+### Stage 5
+
+Refactor this code until all methods body is <= 5 lines, and you find the code clean.
+
