@@ -1,3 +1,7 @@
+/**
+ * Make this code clean.
+ */
+
 #include "Stage4.hpp"
 double Stage4::compute(std::vector<double> c, bool v, bool b)
 {

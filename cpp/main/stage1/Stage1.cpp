@@ -1,3 +1,7 @@
+/**
+ * Uncomment the tests, and make them pass
+ */
+
 #include "Stage1.hpp"
 
 const Stage1 Stage1::POTATO = Stage1(1);
