@@ -20,6 +20,9 @@ impl Replace for String
   }
 }
 
+/**
+ * Remove all the code duplications.
+ */
 pub fn do_the_thing(input: &String) -> String
 {
   let mut result: String;
