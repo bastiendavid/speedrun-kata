@@ -2,3 +2,5 @@
 **/.gradle
 **/out
 **/build
+Cargo.lock
+target
