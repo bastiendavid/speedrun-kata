@@ -21,6 +21,5 @@ INSTANTIATE_TEST_CASE_P(Stage3TestInstantiation,
 
 TEST(Stage3Test, doTheThing_transforms_an_empty_string) {
   ASSERT_STREQ(Stage3::doTheThing("").c_str(), "short_even_");
-
 }
 
