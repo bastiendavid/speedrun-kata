@@ -6,7 +6,7 @@ This kata is designed to work on mastering your IDE and your execution speed, as
 
 ## Playing the kata
 
-This kata is designed to be played in pairs (but you can also play it alone if you must).
+This kata is designed to be played in pairs (but you can also play it alone if you must, and it also work in small mobs).
 
 There are several stages, you can do them in any order. Your goal, as a team, is to perform them the fastest you can. You can see that as a video game [speedrun](https://en.wikipedia.org/wiki/Speedrun), or [rallying](https://en.wikipedia.org/wiki/Rallying).
 
@@ -18,7 +18,7 @@ Here is how a stage is played:
 - Discuss on what could be improved.
 - git reset --hard
 - Repeat.
-- The stage is over when you have improved your initial run time 3 times.
+- The stage is over when you have improved your initial run time twice.
 
 As a driver:
 - Focus on typing.
@@ -41,3 +41,4 @@ As a navigator:
 - Do not try to compare your times with others, since your code will end-up in a different state.
 - Maybe have a look at some IDE cheat sheets. Here is [IntelliJ IDEA default keymap](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)
 - Yes, copy/paste from a previous run is considered as cheating.
+
