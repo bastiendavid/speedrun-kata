@@ -53,6 +53,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="stage2\TestStage2.cs" />
     <Compile Include="stage3\TestStage3.cs" />
+    <Compile Include="stage4\TestStage4.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
