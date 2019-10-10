@@ -13,15 +13,6 @@ public:
 
     int getPrice() const;
 
-    static int computePrice(std::vector<Stage1> const & cart) {
-      int price = 0;
-      for (auto const & item : cart)
-      {
-        price += item.getPrice();
-      }
-      return price;
-    }
-
 private:
     int price;
 
