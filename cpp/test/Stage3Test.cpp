@@ -3,9 +3,8 @@
 
 using namespace testing;
 
-class Stage3Test: public TestWithParam<std::pair<std::string, std::string>> {};
-
 using Arguments = std::pair<std::string, std::string>;
+class Stage3Test: public TestWithParam<Arguments> {};
 TEST_P(Stage3Test, doTheThing_transforms_the_input_string_parametrized) {
   ASSERT_STREQ(Stage3::doTheThing(GetParam().first).c_str(), GetParam().second.c_str());
 }
