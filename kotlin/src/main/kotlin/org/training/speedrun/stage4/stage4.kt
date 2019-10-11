@@ -12,7 +12,7 @@ class Stage4 {
         }
         val d = compute(c.size, b, v)
         val d2 = d * t / 100
-        return t + d2
+        return t - d2
     }
 
     private fun compute(n: Int, b1: Boolean, b2: Boolean): Int {

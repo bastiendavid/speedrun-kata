@@ -16,17 +16,17 @@ internal class Stage4Test {
             return Stream.of(
                 Arguments.of(doubleArrayOf(), false, false, 0),
                 Arguments.of(doubleArrayOf(2.0, 3.0), false, false, 5),
-                Arguments.of(doubleArrayOf(10.0, 10.0), true, true, 25),
-                Arguments.of(doubleArrayOf(10.0, 10.0), true, false, 21),
-                Arguments.of(doubleArrayOf(10.0, 10.0), false, true, 24),
-                Arguments.of(doubleArrayOf(1.0, 1.0, 1.0, 1.0, 1.0), false, false, 5.2),
-                Arguments.of(doubleArrayOf(1.0, 1.0, 1.0, 1.0, 1.0), true, false, 5.45),
-                Arguments.of(doubleArrayOf(1.0, 1.0, 1.0, 1.0, 1.0), false, true, 6.2),
-                Arguments.of(doubleArrayOf(1.0, 1.0, 1.0, 1.0, 1.0), true, true, 6.45),
-                Arguments.of(doubleArrayOf(2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0), false, false, 22),
-                Arguments.of(doubleArrayOf(2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0), true, false, 23),
-                Arguments.of(doubleArrayOf(2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0), false, true, 26),
-                Arguments.of(doubleArrayOf(2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0), true, true, 27)
+                Arguments.of(doubleArrayOf(10.0, 10.0), true, true, 15),
+                Arguments.of(doubleArrayOf(10.0, 10.0), true, false, 19),
+                Arguments.of(doubleArrayOf(10.0, 10.0), false, true, 16),
+                Arguments.of(doubleArrayOf(1.0, 1.0, 1.0, 1.0, 1.0), false, false, 4.8),
+                Arguments.of(doubleArrayOf(1.0, 1.0, 1.0, 1.0, 1.0), true, false, 4.55),
+                Arguments.of(doubleArrayOf(1.0, 1.0, 1.0, 1.0, 1.0), false, true, 3.8),
+                Arguments.of(doubleArrayOf(1.0, 1.0, 1.0, 1.0, 1.0), true, true, 3.55),
+                Arguments.of(doubleArrayOf(2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0), false, false, 18),
+                Arguments.of(doubleArrayOf(2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0), true, false, 17),
+                Arguments.of(doubleArrayOf(2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0), false, true, 14),
+                Arguments.of(doubleArrayOf(2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0), true, true, 13)
             )
         }
     }
