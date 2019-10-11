@@ -15,17 +15,17 @@ class Stage4Test {
         return Stream.of(
                 Arguments.of(new double[]{}, false, false, 0),
                 Arguments.of(new double[]{2, 3}, false, false, 5),
-                Arguments.of(new double[]{10, 10}, true, true, 25),
-                Arguments.of(new double[]{10, 10}, true, false, 21),
-                Arguments.of(new double[]{10, 10}, false, true, 24),
-                Arguments.of(new double[]{1, 1, 1, 1, 1}, false, false, 5.2),
-                Arguments.of(new double[]{1, 1, 1, 1, 1}, true, false, 5.45),
-                Arguments.of(new double[]{1, 1, 1, 1, 1}, false, true, 6.2),
-                Arguments.of(new double[]{1, 1, 1, 1, 1}, true, true, 6.45),
-                Arguments.of(new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, false, false, 22),
-                Arguments.of(new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, true, false, 23),
-                Arguments.of(new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, false, true, 26),
-                Arguments.of(new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, true, true, 27)
+                Arguments.of(new double[]{10, 10}, true, true, 15),
+                Arguments.of(new double[]{10, 10}, true, false, 19),
+                Arguments.of(new double[]{10, 10}, false, true, 16),
+                Arguments.of(new double[]{1, 1, 1, 1, 1}, false, false, 4.8),
+                Arguments.of(new double[]{1, 1, 1, 1, 1}, true, false, 4.55),
+                Arguments.of(new double[]{1, 1, 1, 1, 1}, false, true, 3.8),
+                Arguments.of(new double[]{1, 1, 1, 1, 1}, true, true, 3.55),
+                Arguments.of(new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, false, false, 18),
+                Arguments.of(new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, true, false, 17),
+                Arguments.of(new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, false, true, 14),
+                Arguments.of(new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, true, true, 13)
         );
     }
 

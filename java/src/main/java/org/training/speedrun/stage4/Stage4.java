@@ -12,7 +12,7 @@ public class Stage4 {
         }
         int d = compute(c.length, b, v);
         double d2 = d * t / 100;
-        return t + d2;
+        return t - d2;
     }
 
     int compute(int n, boolean b1, boolean b2) {
