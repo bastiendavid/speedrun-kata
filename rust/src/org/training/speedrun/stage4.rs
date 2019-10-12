@@ -1,40 +1,36 @@
 use std::vec::Vec;
+use std::ops::Add;
 
 /**
  * Make this code clean.
  */
-fn compute_price(c: &Vec<f64>, v: bool, b: bool) -> f64
+fn compute_price(cart: &Vec<f64>, vip_client: bool, black_friday: bool) -> f64
 {
-  let mut t = 0f64;
-  for value in c
-  {
-    t += value;
-  }
-  let d = compute_discount(c.len(), b, v);
-  let d2 = (d as f64)*t / 100f64;
-  t + d2
+  let total = cart.iter().fold(0f64, Add::add);
+  let discount = (compute_discount(cart.len(), black_friday, vip_client) as f64)*total / 100f64;
+  total + discount
 }
 
-fn compute_discount(n: usize, b1: bool, b2: bool) -> usize
+fn compute_discount(size: usize, black_friday: bool, vip_client: bool) -> usize
 {
-  let mut p = 0;
-  if n >= 5 && n < 10
+  let mut percent = 0;
+  if size >= 5 && size < 10
   {
-    p += 4;
+    percent += 4;
   }
-  else if n >= 10
+  else if size >= 10
   {
-    p += 10;
+    percent += 10;
   }
-  if b1 {
+  if black_friday {
     //black friday discount
-    p += 20;
+    percent += 20;
   }
-  if b2 {
+  if vip_client {
     //vip client
-    p += 5;
+    percent += 5;
   }
-  p
+  percent
 }
 
 macro_rules! generate_cart

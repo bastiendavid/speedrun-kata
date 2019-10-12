@@ -1,5 +1,3 @@
-use std::ops::Add;
-
 #[derive(Clone,Copy)]
 pub enum Items
 {
@@ -25,11 +23,6 @@ impl Items
       &Items::Peer => 2,
     }
   }
-}
-
-fn compute_price(v: &std::vec::Vec<Items>) -> i32
-{
-    v.iter().map(Items::get_price).fold(0i32, Add::add)
 }
 
 macro_rules! provide_carts
