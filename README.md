@@ -52,7 +52,7 @@ Uncomment the tests, and make them pass.
 
 ### Stage 2
 
-Refactor until there is only one level of indentation, you think the code is clean, and all the tests pass.
+Refactor until there is no else, you think the code is clean, and all the tests pass.
 
 ### Stage 3
 
