@@ -11,7 +11,7 @@ double Stage4::compute(std::vector<double> c, bool v, bool b)
   }
   int d = compute(c.size(), b, v);
   double d2 = d * t / 100;
-  return t + d2;
+  return t - d2;
 }
 
 int Stage4::compute(int n, bool b1, bool b2) {
