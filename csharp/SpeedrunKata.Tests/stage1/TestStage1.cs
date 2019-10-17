@@ -15,7 +15,7 @@ namespace SpeedrunKata.Tests.stage1
         //    // When
         //    int price = stage1.ComputePrice(cart);
         //    // Then
-        //    Assert.AreEqual(price, expectedPrice);
+        //    Assert.AreEqual(expectedPrice, price);
         //}
 
         static IEnumerable<object[]> ProvideCarts
