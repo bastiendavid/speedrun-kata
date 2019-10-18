@@ -16,13 +16,16 @@ internal class Stage1Test {
 //        assertThat(price).isEqualTo(expectedPrice)
 //    }
 
-    private fun provideCarts(): Stream<Arguments> {
-        return Stream.of(
-            Arguments.of(arrayOf(Stage1.Items.APPLE, Stage1.Items.TOMATO, Stage1.Items.BANANA), 6),
-            Arguments.of(arrayOf(Stage1.Items.POTATO, Stage1.Items.POTATO), 2),
-            Arguments.of(arrayOf(Stage1.Items.LETTUCE, Stage1.Items.TOMATO, Stage1.Items.POTATO), 5),
-            Arguments.of(arrayOf(Stage1.Items.APPLE, Stage1.Items.PEER, Stage1.Items.BANANA, Stage1.Items.PEER), 8)
-        )
+    companion object {
+        @JvmStatic
+        private fun provideCarts(): Stream<Arguments> {
+            return Stream.of(
+                Arguments.of(arrayOf(Stage1.Items.APPLE, Stage1.Items.TOMATO, Stage1.Items.BANANA), 6),
+                Arguments.of(arrayOf(Stage1.Items.POTATO, Stage1.Items.POTATO), 2),
+                Arguments.of(arrayOf(Stage1.Items.LETTUCE, Stage1.Items.TOMATO, Stage1.Items.POTATO), 5),
+                Arguments.of(arrayOf(Stage1.Items.APPLE, Stage1.Items.PEER, Stage1.Items.BANANA, Stage1.Items.PEER), 8)
+            )
+        }
     }
 
 }

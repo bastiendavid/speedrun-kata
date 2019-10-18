@@ -5,7 +5,7 @@ package org.training.speedrun.stage1
  */
 class Stage1 {
 
-    internal enum class Items private constructor(val price: Int) {
+    enum class Items private constructor(val price: Int) {
         POTATO(1),
         TOMATO(2),
         LETTUCE(2),
