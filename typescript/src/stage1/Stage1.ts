@@ -4,8 +4,7 @@ export enum Item {
   LETTUCE = 2,
   APPLE = 1,
   BANANA = 3,
-  PEER = 2
-
+  PEER = 2,
 }
 
 /**
