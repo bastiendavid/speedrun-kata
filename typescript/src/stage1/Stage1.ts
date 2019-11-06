@@ -14,10 +14,4 @@ export class Stage1 {
   getPrice(item: Item) {
     return item;
   }
-
-  computePrice(items: Item[]) {
-    return items.reduce((agg, cur: Item) => {
-      return agg + this.getPrice(cur);
-    }, 0);
-  }
 }
