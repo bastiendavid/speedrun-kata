@@ -1,4 +1,5 @@
 // todo Remove all the code duplications.
+
 export class Stage3 {
   doTheThing(input: string): string {
     let result: string;

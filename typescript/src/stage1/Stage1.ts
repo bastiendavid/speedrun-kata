@@ -7,9 +7,8 @@ export enum Item {
   PEER = 2,
 }
 
-/**
- * Uncomment the tests, and make them pass
- */
+//todo Uncomment the tests, and make them pass
+
 export class Stage1 {
   getPrice(item: Item) {
     return item;

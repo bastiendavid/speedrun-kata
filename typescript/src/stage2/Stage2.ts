@@ -1,6 +1,5 @@
-/**
- * Refactor until there is no else, you think the code is clean, and all the tests pass.
- */
+//todo Refactor until there is no else, you think the code is clean, and all the tests pass.
+
 export class Stage2 {
   computeScore(dice1: number, dice2: number, dice3: number): number {
     let score: number;

@@ -1,4 +1,5 @@
 //todo Make this code clean.
+
 export class Stage4 {
   compute(c: number[], v: boolean, b: boolean): number {
     let t = 0;
