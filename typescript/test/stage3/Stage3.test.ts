@@ -14,12 +14,12 @@ describe('Stage3', () => {
   assertions.forEach(function(test, index) {
     it('should transform input string for case ' + index, () => {
       const stage3 = new Stage3();
-      expect(stage3.doTheThing(test.input), test.output);
+      expect(stage3.doTheThing(test.input)).to.equal(test.output);
     });
   });
 
   it('should transforms an empty string', () => {
     const stage3 = new Stage3();
-    expect(stage3.doTheThing(''), 'short_even_');
+    expect(stage3.doTheThing('')).to.equal('short_even_');
   });
 });
