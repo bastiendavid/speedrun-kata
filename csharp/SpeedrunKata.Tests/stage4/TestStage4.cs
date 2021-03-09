@@ -23,17 +23,17 @@ namespace SpeedrunKata.Tests.stage4
                 {
                     new object[] { new double[]{}, false, false, 0 },
                     new object[] { new double[]{2, 3}, false, false, 5 },
-                    new object[] { new double[]{10, 10}, true, true, 25 },
-                    new object[] { new double[]{10, 10}, true, false, 21 },
-                    new object[] { new double[]{10, 10}, false, true, 24 },
-                    new object[] { new double[]{1, 1, 1, 1, 1}, false, false, 5.2 },
-                    new object[] { new double[]{1, 1, 1, 1, 1}, true, false, 5.45 },
-                    new object[] { new double[]{1, 1, 1, 1, 1}, false, true, 6.2 },
-                    new object[] { new double[]{1, 1, 1, 1, 1}, true, true, 6.45 },
-                    new object[] { new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, false, false, 22 },
-                    new object[] { new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, true, false, 23 },
-                    new object[] { new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, false, true, 26 },
-                    new object[] { new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, true, true, 27 }
+                    new object[] { new double[]{10, 10}, true, true, 15 },
+                    new object[] { new double[]{10, 10}, true, false, 19 },
+                    new object[] { new double[]{10, 10}, false, true, 16 },
+                    new object[] { new double[]{1, 1, 1, 1, 1}, false, false, 4.8 },
+                    new object[] { new double[]{1, 1, 1, 1, 1}, true, false, 4.55 },
+                    new object[] { new double[]{1, 1, 1, 1, 1}, false, true, 3.8 },
+                    new object[] { new double[]{1, 1, 1, 1, 1}, true, true, 3.55 },
+                    new object[] { new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, false, false, 18 },
+                    new object[] { new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, true, false, 17 },
+                    new object[] { new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, false, true, 14 },
+                    new object[] { new double[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, true, true, 13 }
                 };
             }
         }
