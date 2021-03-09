@@ -14,7 +14,7 @@
             }
             int d = Compute(c.Length, b, v);
             double d2 = d * t / 100;
-            return t + d2;
+            return t - d2;
         }
 
         public int Compute(int n, bool b1, bool b2)
